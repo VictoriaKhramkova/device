@@ -69,12 +69,12 @@
       </div>
       <nav class="navigation-catalog">
         <ul class="navigation-catalog-list">
-          <li class="navigation-catalog-item">
+          <li class="navigation-catalog-item catalog-closed">
             <a class="navigation-link" href="catalog.html">КАТАЛОГ ТОВАРОВ</a>
-            <button class="button-subcatalog button-subcatalog-opened button-subcatalog-opened-nojs" type="button">
+            <button class="button-subcatalog button-subcatalog-open" type="button">
               <span class="visually-hidden">Подменю.</span>
             </button>
-            <div class="catalog-popover-wrapper popover-closed popover-closed-nojs">
+            <div class="catalog-popover-wrapper catalog-closed-nojs">
               <ul class="subcatalog-list">
                 <li class="subcatalog-item">
                   <ul class="subcatalog-categories-list">
@@ -152,7 +152,7 @@
               </dl>
             <ol class="slider-navigation">
               <li class="slider-navigation-item">
-                <button class="slider-button slider-active" type="button">
+                <button class="slider-button slider-button-current" type="button">
                   <span class="visually-hidden">1 слайд</span>
                 </button>
               </li>
@@ -191,17 +191,17 @@
             <ol class="slider-navigation">
               <li class="slider-navigation-item">
                 <button class="slider-button" type="button">
-                  <span class="visually-hidden">1 слайд</span>
+                  <span class="visually-hidden">Текущий слайд.</span>
                 </button>
               </li>
               <li class="slider-navigation-item">
-                <button class="slider-button slider-active" type="button">
-                  <span class="visually-hidden">2 слайд</span>
+                <button class="slider-button slider-button-current" type="button">
+                  <span class="visually-hidden">Слайд 2.</span>
                 </button>
               </li>
               <li class="slider-navigation-item">
                 <button class="slider-button" type="button">
-                  <span class="visually-hidden">3 слайд</span>
+                  <span class="visually-hidden">Слайд 3.</span>
                 </button>
               </li>
             </ol>
@@ -246,7 +246,7 @@
                 </button>
               </li>
               <li class="slider-navigation-item">
-                <button class="slider-button slider-active" type="button">
+                <button class="slider-button slider-button-current" type="button">
                   <span class="visually-hidden">3 слайд</span>
                 </button>
               </li>
@@ -258,22 +258,22 @@
         <h2 class="visually-hidden">Категории товаров.</h2>
         <ul class="products-list">
           <li class="products-item">
-            <a class="products-item-link" href="#">Виртуальная реальность</a>
+            <a class="products-item-link products-virtual" href="#">Виртуальная реальность</a>
           </li>
           <li class="products-item">
-            <a class="products-item-link" href="#">Моноподы для селфи</a>
+            <a class="products-item-link products-monopod" href="#">Моноподы для селфи</a>
           </li>
           <li class="products-item">
-            <a class="products-item-link" href="#">Экшн-камеры</a>
+            <a class="products-item-link products-action" href="#">Экшн-камеры</a>
           </li>
           <li class="products-item">
-            <a class="products-item-link" href="#">Фитнес-браслеты</a>
+            <a class="products-item-link products-bracelet" href="#">Фитнес-браслеты</a>
           </li>
           <li class="products-item">
-            <a class="products-item-link" href="#">Умные часы</a>
+            <a class="products-item-link products-watch" href="#">Умные часы</a>
           </li>
           <li class="products-item">
-            <a class="products-item-link" href="#">Квадрокоптеры</a>
+            <a class="products-item-link products-quadrocopter" href="#">Квадрокоптеры</a>
           </li>
         </ul>
       </section>
