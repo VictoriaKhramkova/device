@@ -504,6 +504,7 @@ img {
 
 .products-list {
   display: flex;
+  flex-wrap: wrap;
   column-gap: 40px;
   width: 1160px;
   margin: 0 auto;
@@ -516,12 +517,61 @@ img {
 }
 
 .products-item-link {
+  display: flex;
+  flex-direction: column;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   line-height: 24px;
   color: #000000;
+  letter-spacing: -0.5px;
   text-decoration: none;
 }
+
+.catalog-image {
+  width: 160px;
+  height: 160px;
+  margin-bottom: 32px;
+  background-color: #ffe17f;
+  background-repeat: no-repeat;
+}
+
+.products-virtual-image {
+  background-image: url("../images/index/catalogue-virtual-reality.svg");
+  background-size: 97px 55px;
+  background-position: center center;
+}
+
+.products-monopod-image {
+  background-image: url("../images/index/catalogue-monopods.svg");
+  background-size: 87px 117px;
+  background-position: center bottom;
+}
+
+.products-action-image {
+  background-image: url("../images/index/catalogue-action-cameras.svg");
+  background-size: 72px 87px;
+  background-position: center center;
+}
+
+.products-bracelet-image {
+  background-image: url("../images/index/catalogue-fitness-bracelets.svg");
+  background-size: 108px 66px;
+  background-position: center center;
+}
+
+.products-watch-image {
+  background-image: url("../images/index/catalogue-smartwatches.svg");
+  background-size: 57px 98px;
+  background-position: center center;
+}
+
+.products-quadcopter-image {
+  background-image: url("../images/index/catalogue-quadcopters.svg");
+  background-size: 133px 70px;
+  background-position: center center;
+}
+
+/*Услуги*/
 
 .advantages {
   min-height: 289px;
@@ -533,8 +583,38 @@ img {
   display: grid;
   grid-template-columns: 287px 694px;
   column-gap: 116px;
+  align-items: center;
   width: 1160px;
   margin: 0 auto;
+}
+
+.advantages-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.advantages-button:not(:last-child) {
+  margin-bottom: 35px;
+}
+
+.advantages-description-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.advantages-description-item {
+  display: flex;
+  column-gap: 106px;
+  width: 452px;
+}
+
+.delivery-logo {
+  background-image: url("../images/index/advantages-delivery.png");
+  background-size: 136px 164px;
+  background-repeat: no-repeat;
+  background-position: right center;
 }
 
 .delivery {
