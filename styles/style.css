@@ -264,13 +264,22 @@ img {
   background-color: #ffe17f;
 }
 
-.catalog-closed .catalog-popover-wrapper,
-.catalog-closed .button-subcatalog-opened {
+.catalog-closed,
+.catalog-closed .button-subcatalog-closed {
   display: none;
 }
 
-.catalog-open .button-subcatalog-closed {
+.catalog-closed .button-subcatalog-opened {
   display: block;
+}
+
+.catalog-opened,
+.catalog-opened .button-subcatalog-closed {
+  display: block;
+}
+
+.catalog-opened .button-subcatalog-opened {
+  display: none;
 }
 
 .subcatalog-list {
@@ -304,19 +313,16 @@ img {
 /*main*/
 
 .main-catalog {
-  position: relative;
   flex-grow: 1;
 }
 
 /*Слайдер*/
 
 .promo-slider {
-  position: absolute;
-  top: -150px;
-  left: 140px;
-  z-index: 1;
+  position: relative;
   width: 1160px;
   margin: 0 auto;
+  margin-top: -150px;
   margin-bottom: 70px;
 }
 
@@ -341,9 +347,8 @@ img {
 
 .slider-item-number {
   position: absolute;
-  top: -97px;
+  top: -98px;
   right: 49px;
-  z-index: -1;
   font-size: 180px;
   line-height: 30px;
   font-family: inherit;
@@ -356,33 +361,31 @@ img {
   grid-row: 1/5;
 }
 
-.slider-arrow-button {
+.prev-button,
+.next-button {
   width: 20px;
   height: 60px;
+  position: absolute;
+  top: 211px;
+  background-image: url("../images/index/slider-arrow-left.svg");
+  background-size: 20px 60px;
+  background-repeat: no-repeat;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
-.slider-prev {
-  position: absolute;
-  top: 211px;
+.prev-button {
   left: 30px;
-  background-image: url("../images/index/slider-arrow-left.svg");
-  background-size: 20px 60px;
-  background-repeat: no-repeat;
 }
 
-.slider-next {
-  position: absolute;
-  top: 211px;
+.next-button {
   right: 600px;
   background-image: url("../images/index/slider-arrow-right.svg");
-  background-size: 20px 60px;
-  background-repeat: no-repeat;
 }
 
 .slider-item-title {
+  position: relative;
   grid-column: 2/3;
   grid-row: 1/2;
   margin: 0;
@@ -498,8 +501,7 @@ img {
 .products {
   width: 1160px;
   margin: 0 auto;
-  margin-top: 480px;
-  margin-bottom: 172px;
+  margin-bottom: 185px;
 }
 
 .products-list {
@@ -580,12 +582,21 @@ img {
 }
 
 .advantages-wrapper {
+  position: relative;
+  z-index: 0;
   display: grid;
-  grid-template-columns: 287px 694px;
+  grid-template-columns: 287px 730px;
   column-gap: 116px;
-  align-items: center;
   width: 1160px;
   margin: 0 auto;
+}
+
+.advantages-list-wrapper {
+  height: 100%;
+  margin-top: -102px;
+  padding-top: 64px;
+  padding-bottom: 51px;
+  border-right: 7px solid #000000;
 }
 
 .advantages-list {
@@ -594,8 +605,26 @@ img {
   list-style: none;
 }
 
-.advantages-button:not(:last-child) {
-  margin-bottom: 35px;
+.advantages-button-item {
+  width: 262px;
+}
+
+.advantages-button-item:not(:last-child) {
+  margin-bottom: 34px;
+}
+
+.advantages-button {
+  display: block;
+  width: 160px;
+  padding: 10px 0;
+}
+
+.advantage-current {
+  width: 100%;
+  padding-left: 18px;
+  color: #ffe17f;
+  text-align: left;
+  background-color: #000000;
 }
 
 .advantages-description-list {
@@ -605,14 +634,64 @@ img {
 }
 
 .advantages-description-item {
+  display: none;
+}
+
+.advantages-description-current {
   display: flex;
-  column-gap: 106px;
-  width: 452px;
+  min-width: 694px;
+}
+
+.advantages-description-wrapper {
+  max-width: 480px;
+}
+
+.advantages-title {
+  margin: 0;
+  margin-top: -29px;
+  margin-bottom: 34px;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+}
+
+.advantages-description {
+  margin: 0;
+  padding: 0;
 }
 
 .delivery-logo {
+  width: 136px;
+  height: 164px;
+  margin-top: -24px;
+  margin-left: 78px;
   background-image: url("../images/index/advantages-delivery.png");
   background-size: 136px 164px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.guarantee-logo {
+  width: 171px;
+  height: 195px;
+  margin-top: -40px;
+  margin-left: 78px;
+  background-image: url("../images/index/advantages-guarantee.png");
+  background-size: 171px 195px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.credit-logo {
+  width: 156px;
+  height: 188px;
+  margin-top: -37px;
+  margin-left: 94px;
+  background-image: url("../images/index/advantages-credit.png");
+  background-size: 156px 188px;
   background-repeat: no-repeat;
   background-position: right center;
 }

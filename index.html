@@ -69,12 +69,12 @@
       </div>
       <nav class="navigation-catalog">
         <ul class="navigation-catalog-list">
-          <li class="navigation-catalog-item catalog-closed">
+          <li class="navigation-catalog-item">
             <a class="navigation-link" href="catalog.html">КАТАЛОГ ТОВАРОВ</a>
-            <button class="button-subcatalog button-subcatalog-open" type="button">
+            <button class="button-subcatalog button-subcatalog-opened button-subcatalog-opened-nojs" type="button">
               <span class="visually-hidden">Подменю.</span>
             </button>
-            <div class="catalog-popover-wrapper catalog-closed-nojs">
+            <div class="catalog-popover-wrapper catalog-closed catalog-closed-nojs">
               <ul class="subcatalog-list">
                 <li class="subcatalog-item">
                   <ul class="subcatalog-categories-list">
@@ -125,17 +125,17 @@
       <h1 class="visually-hidden">Интернет-магазин гаджетов с оригинальным дизайном.</h1>
       <section class="promo-slider">
         <h2 class="visually-hidden">Популярные товары.</h2>
+        <button class="prev-button" type="button">
+          <span class="visually-hidden">Посмотреть предыдущий слайд.</span>
+        </button>
+        <button class="next-button" type="button">
+          <span class="visually-hidden">Посмотреть следующий слайд.</span>
+        </button>
         <ol class="slider-pagination">
           <li class="slider-pagination-item slider-pagination-item-current">
             <p class="slider-item-number">01</p>
-            <button class="slider-arrow-button slider-prev" type="button">
-              <span class="visually-hidden">Назад.</span>
-            </button>
             <img class="stock-image" src="images/index/slider-drone.png" width="560" height="560"
               alt="Квадрокоптер, оснащенный лазером.">
-            <button class="slider-arrow-button slider-next" type="button">
-              <span class="visually-hidden">Вперед.</span>
-            </button>
             <h3 class="slider-item-title">Порхает как бабочка, жалит как пчела!</h3>
             <p class="slider-item-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным
               лазером, замаскированным под стандартную камеру.</p>
@@ -170,14 +170,8 @@
           </li>
           <li class="slider-pagination-item">
             <p class="slider-item-number">02</p>
-            <button class="slider-arrow-button slider-prev" type="button">
-              <span class="visually-hidden">Назад.</span>
-            </button>
             <img class="stock-image" src="images/index/slider-fitness-bracelets.png" width="560" height="560"
               alt="Фитнес-браслет.">
-            <button class="slider-arrow-button slider-next" type="button">
-              <span class="visually-hidden">Вперед.</span>
-            </button>
             <h3 class="slider-item-title">Худеем правильно!</h3>
             <p class="slider-item-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать
               занятия и соблюдать диету.</p>
@@ -208,14 +202,8 @@
           </li>
           <li class="slider-pagination-item">
             <p class="slider-item-number">03</p>
-            <button class="slider-arrow-button slider-prev" type="button">
-              <span class="visually-hidden">Назад.</span>
-            </button>
             <img class="stock-image" src="images/index/slider-selfie-stick.png" width="560" height="560"
               alt="Палка для селфи.">
-            <button class="slider-arrow-button slider-next" type="button">
-              <span class="visually-hidden">Вперед.</span>
-            </button>
             <h3 class="slider-item-title">Делай селфи, как Бен Стиллер!</h3>
             <p class="slider-item-description">Самая длинная палка для селфи доступна в нашем магазине.
               Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
@@ -298,23 +286,25 @@
       <section class="advantages">
         <div class="advantages-wrapper">
           <h2 class="visually-hidden">Наши преимущества.</h2>
-          <ul class="advantages-list">
-            <li class="advantages-button">
-              <a class="main-page-button advantage-active" href="#">Доставка</a>
-            </li>
-            <li class="advantages-button">
-              <a class="main-page-button" href="#">Гарантия</a>
-            </li>
-            <li class="advantages-button">
-              <a class="main-page-button" href="#">Кредит</a>
-            </li>
-          </ul>
+          <div class="advantages-list-wrapper">
+            <ul class="advantages-list">
+              <li class="advantages-button-item">
+                <a class="main-page-button advantages-button advantage-current" href="#">Доставка</a>
+              </li>
+              <li class="advantages-button-item">
+                <a class="main-page-button advantages-button" href="#">Гарантия</a>
+              </li>
+              <li class="advantages-button-item">
+                <a class="main-page-button advantages-button" href="#">Кредит</a>
+              </li>
+            </ul>
+          </div>
           <ul class="advantages-description-list">
-            <li class="advantages-description-item advantages-description-visible">
+            <li class="advantages-description-item advantages-description-current">
               <div class="advantages-description-wrapper">
                 <h3 class="advantages-title">Доставка</h3>
-                <p class="advantages-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду
-                  совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                <p class="advantages-description">Мы с удовольствием доставим ваш товар прямо к&nbsp;вашему подъезду
+                  совершенно бесплатно! Ведь мы&nbsp;неплохо заработаем, поднимая его на ваш этаж.</p>
               </div>
               <div class="delivery-logo"></div>
             </li>
