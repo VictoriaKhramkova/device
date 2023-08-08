@@ -1,3 +1,3 @@
 # device
 ## В разработке
-### Предварительный просмотр https://victoriakhramkova.github.io/device/
+### Предварительный просмотр [my portfolio](https://victoriakhramkova.github.io/device/)
