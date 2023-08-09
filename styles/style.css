@@ -453,6 +453,7 @@ img {
   text-align: center;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
+  font-size: 18px;
   line-height: 21.13px;
   letter-spacing: 3.5px;
   color: #000000;
@@ -616,7 +617,7 @@ img {
 }
 
 .advantages-button-item {
-  width: 262px;
+  width: 280px;
 }
 
 .advantages-button-item:not(:last-child) {
@@ -624,9 +625,9 @@ img {
 }
 
 .advantages-button {
-  display: block;
   width: 160px;
   padding: 10px 0;
+  border: none;
 }
 
 .advantage-current {
@@ -958,22 +959,41 @@ img {
 /* footer */
 
 .main-footer {
-  padding: 62px 140px 61px;
+  padding: 61px 141px;
   background-color: #444444;
   color: #ffffff;
 }
 
+.footer-logo-link {
+  display: block;
+  margin-bottom: 27px;
+}
+
 .main-footer-wrapper {
   display: grid;
-  grid-template-columns: 234px 444px 175px;
-  gap: 35px 124px;
+  grid-template-columns: 240px 444px 175px;
+  justify-content: space-between;
+  row-gap: 46px;
+}
+
+.main-footer-address {
+  width: 240px;
+  font-style: normal;
+}
+
+.footer-address-description {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .footer-navigation-list {
   display: flex;
   justify-content: space-between;
-  column-gap: 35px;
+  column-gap: 32px;
+  width: 444px;
   margin: 0;
+  margin-left: -32px;
   padding: 0;
   list-style: none;
 }
@@ -983,14 +1003,34 @@ img {
   font-weight: 800;
   text-decoration: none;
   color: #ffffff;
-  letter-spacing: 4.5px;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+}
+
+.footer-phone-link {
+  margin-top: 6px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.footer-align-wrapper {
+  align-self: center;
+}
+
+.devider {
+  display: block;
+  width: 80px;
+  height: 7px;
+  background-color: #ffe17f;
 }
 
 .footer-social-list {
   display: flex;
-  justify-content: center;
   column-gap: 15px;
+  width: 150px;
   margin: 0;
+  margin-left: 114px;
   padding: 0;
   list-style: none;
 }
@@ -1000,4 +1040,15 @@ img {
   height: 40px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-social-link svg {
+  margin-top: 50%;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo-link {
+  display: block;
+  justify-self: end;
 }
