@@ -332,11 +332,7 @@ img {
   list-style: none;
 }
 
-.slider-pagination-item {
-  display: none;
-}
-
-.slider-pagination-item-current {
+.slider {
   position: relative;
   display: grid;
   grid-template-columns: 560px 1fr;
@@ -363,10 +359,11 @@ img {
 
 .prev-button,
 .next-button {
-  width: 20px;
-  height: 60px;
   position: absolute;
   top: 211px;
+  z-index: 1;
+  width: 20px;
+  height: 60px;
   background-image: url("../images/index/slider-arrow-left.svg");
   background-size: 20px 60px;
   background-repeat: no-repeat;
@@ -382,6 +379,16 @@ img {
 .next-button {
   right: 600px;
   background-image: url("../images/index/slider-arrow-right.svg");
+}
+
+.prev-button:hover,
+.next-button:hover {
+  opacity: 0.6;
+}
+
+.prev-button:active,
+.next-button:active {
+  opacity: 0.3;
 }
 
 .main-title {
